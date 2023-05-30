@@ -47,6 +47,18 @@ Executer la commande python main_MRICLassification.py —-MRIfolder_neuroflux <n
 
 ## Analyse statistique des performances
 VGG16 :
+ 
+|  Metrics  | Languages |
+|----------:|-----------|
+|        ACC| Javascript|
+|  Precision| Python    |
+|     Recall| SQL       |
+|        ACC| Javascript|
+|Specificity| Python    |
+|   F1 Score| SQL       |
+  
+  
+  
 |ACC | Precision | Recall | Specificity | F1 Score |
 |------||------||------||------||------|
 |71,4%||12,0%||15,0%||81,0%||42,9%|
