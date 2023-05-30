@@ -32,11 +32,7 @@ IPTE : ”Neuroflux disorder with intermediate polyglutamine tract expansion”)
 
 Dans le jeu de données, il y a un déséquilibre des données à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
 
-|Classes|0 (PTE)|1 (IO)|2 (IPTE)|3 (EO)|4 (LO)|
-|------||:------:||:------:||:------:||:------:||------:|
-|Avant équilibrage|580|72|171|233|240|
-|------||------||------||------||------||------|
-|Après équilibrage|171|72|171|171|171|
+|Classes|0 (PTE)|1 (IO)|2 (IPTE)|3 (EO)|4 (LO)||------||:------:||:------:||:------:||:------:||------:||Avant équilibrage|580|72|171|233|240||------||------||------||------||------||------||Après équilibrage|171|72|171|171|171|
 
 Pour finir, un resizing et une normalisation des données est faite.
 
@@ -51,7 +47,7 @@ Executer la commande python main_MRICLassification.py —-MRIfolder_neuroflux <n
 
 ## Analyse statistique des performances
 VGG16 :
-| ACC | Precision | Recall | Specificity | F1 Score |
+|ACC | Precision | Recall | Specificity | F1 Score |
 |------||------||------||------||------|
 |71,4%||12,0%||15,0%||81,0%||42,9%|
   
@@ -79,7 +75,7 @@ L'algorithme n'arrive pas à apprendre
 
 ## Documentation
 
-https://pytorch.org/vision/main/models/generated/torchvision.models.vgg16.html
+[vgg 16] (https://pytorch.org/vision/main/models/generated/torchvision.models.vgg16.html)
 
 ## Authors
 
