@@ -35,7 +35,7 @@ Dans le jeu de données, il y a un déséquilibre des données à prétraiter av
 |   Class   |   Avant   |   Après   |
 |----------:|-----------|-----------|
 |   0 (PTE) |    580    |    171    |
-|   1 (IO   |     72    |     72    |
+|   1 (IO)  |     72    |     72    |
 |   2 (IPTE)|    171    |    171    |
 |   3 (EO)  |    233    |    171    |
 |   4 (LO)  |    240    |    171    |
