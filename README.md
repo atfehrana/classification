@@ -32,7 +32,13 @@ IPTE : ”Neuroflux disorder with intermediate polyglutamine tract expansion”)
 
 Dans le jeu de données, il y a un déséquilibre des données à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
 
-|Classes|0 (PTE)|1 (IO)|2 (IPTE)|3 (EO)|4 (LO)||------||:------:||:------:||:------:||:------:||------:||Avant équilibrage|580|72|171|233|240||------||------||------||------||------||------||Après équilibrage|171|72|171|171|171|
+|   Class   |   Avant   |   Après   |
+|----------:|-----------|-----------|
+|   0 (PTE) |    580    |    171    |
+|   1 (IO   |     72    |     72    |
+|   2 (IPTE)|    171    |    171    |
+|   3 (EO)  |    233    |    171    |
+|   4 (LO)  |    240    |    171    |
 
 Pour finir, un resizing et une normalisation des données est faite.
 
@@ -48,27 +54,26 @@ Executer la commande python main_MRICLassification.py —-MRIfolder_neuroflux <n
 ## Analyse statistique des performances
 VGG16 :
  
-|  Metrics  | Languages |
+|  Metrics  |   VGG16   |
 |----------:|-----------|
-|        ACC| Javascript|
-|  Precision| Python    |
-|     Recall| SQL       |
-|        ACC| Javascript|
-|Specificity| Python    |
-|   F1 Score| SQL       |
+|        ACC|   71,4%   |
+|  Precision|   12,0%   |
+|     Recall|   15,0%   |
+|Specificity|   81,0%   |
+|   F1 Score|   42,9%   |
   
-  
-  
-|ACC | Precision | Recall | Specificity | F1 Score |
-|------||------||------||------||------|
-|71,4%||12,0%||15,0%||81,0%||42,9%|
   
  CNN :
-| ACC | Precision | Recall | Specificity | F1 Score |
-|------||------||------||------||------|
-|100%||2,9%||20,0%||80,0%||14,3%| 
+ 
+|  Metrics  |    CNN    |
+|----------:|-----------|
+|        ACC|   100%    |
+|  Precision|   2,9%    |
+|     Recall|   20,0%   |
+|Specificity|   80,0%   |
+|   F1 Score|   14,3%   |
   
-L'algorithme n'arrive pas à apprendre
+L'algorithme n'arrive pas à apprendre !
 
 ## Dockerisation
   
