@@ -20,6 +20,7 @@ pip install torch, torchvision, torchmetrics
 ## Exploration des données 
 
 Description des données :
+
 1. Général :
 
 Données : 1296 IRM au total de type T2 axial
@@ -29,6 +30,8 @@ IO: “Intermediate onset Neuroflux disorder”
 LO : ”late Onset Neuroflux disorder”
 PTE: ”Neuroflux disorder with polyglutamine tract expansion”
 IPTE : ”Neuroflux disorder with intermediate polyglutamine tract expansion”)
+
+2. Equilibrage des données :
 
 Dans le jeu de données, il y a un déséquilibre des données à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
 
@@ -40,6 +43,8 @@ Dans le jeu de données, il y a un déséquilibre des données à prétraiter av
 |   3 (EO)  |    233    |    171    |
 |   4 (LO)  |    240    |    171    |
 
+3. Preprocessing :
+
 Pour finir, un resizing et une normalisation des données est faite.
 
 ## Entrainement de modèle de prédiction
@@ -49,9 +54,10 @@ Les algorithmes utilisés sont :
 - VGG16 avec des poids pré-entrainés
 - CNN
 
-Executer la commande python main_MRICLassification.py —-MRIfolder_neuroflux <neuroflux MRI folder> —-model_name <"VGG16 or "CNN">
+Executer la commande python main_MRIClassification.py —-MRIfolder_neuroflux <neuroflux MRI folder> —-model_name <"VGG16 or "CNN">
 
 ## Analyse statistique des performances
+ 
 VGG16 :
  
 |  Metrics  |   VGG16   |
@@ -62,7 +68,7 @@ VGG16 :
 |Specificity|   81,0%   |
 |   F1 Score|   42,9%   |
   
-  
+ 
  CNN :
  
 |  Metrics  |    CNN    |
@@ -74,11 +80,11 @@ VGG16 :
 |   F1 Score|   14,3%   |
   
 L'algorithme n'arrive pas à apprendre !
+ 
 
 ## Dockerisation
   
  docker pull ghcr.io/atfehrana/classification/test:latest 
-  
 
 ## Pistes poursuite
 
