@@ -54,7 +54,7 @@ def main(args):
     
     # DATA PREPARATION  
     # Load Path
-    path = args.MRIfolder
+    path = args.MRIfolder_neuroflux
     MRIPath = glob.glob(path + "/*/neuroflux*.jpg")
 
     # Select annnotations
