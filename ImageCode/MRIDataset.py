@@ -1,13 +1,12 @@
-# importing albumentation librairies
+# importing librairies
+import cv2
+import numpy as np
+from PIL import Image
 import albumentations as A
 from albumentations.pytorch.transforms import ToTensorV2
 
 # PyTorch libraries
 import torch
-import numpy as np
-from PIL import Image
-
-import cv2
 
 class MRIDataset(object):
     def __init__(self, imagesPath, labels):
@@ -19,13 +18,14 @@ class MRIDataset(object):
 
     def __getitem__(self, idx):
         
+        # Load Image MRI
         MRI_PIL = Image.open(self.imagesPath[idx])
         MRI_array = np.array(MRI_PIL)
         
         # MRI 1 channel to 3 channels
         MRI_3_channels = cv2.merge((MRI_array,MRI_array,MRI_array))
         
-        # Apply transforms
+        # Apply preprocessing transforms
         preprocess = self.preprocessing()
         sample = preprocess(image=MRI_3_channels)       
         img = sample["image"]   

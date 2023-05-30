@@ -1,4 +1,3 @@
-# Librairies
 import torch.nn as nn
 
 # Creating a personnal model

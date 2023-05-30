@@ -1,11 +1,9 @@
 # importing the libraries
-import numpy as np
+import matplotlib.pyplot as plt
 from torchmetrics import Accuracy, Recall, Precision, Specificity, F1Score
-
 
 # PyTorch libraries
 import torch
-import matplotlib.pyplot as plt
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -20,9 +18,11 @@ def Evaluation(test_loader, model, classes):
           
         for imagesTest, labelsTest in test_loader:
             
-            imagesTest, labelsTest = imagesTest.to(device), labelsTest.to(device)          
+            imagesTest, labelsTest = imagesTest.to(device), labelsTest.to(device)    
+            # Prediction
             predTest = model(imagesTest)
             
+            # Statistics between predictionn and true class
             accuracy = Accuracy(task="multiclass", num_classes=5, top_k=4)
             test_acc = accuracy(predTest, labelsTest) 
             

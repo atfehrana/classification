@@ -91,12 +91,14 @@ def main(args):
     n_test, n_val =  int(num_data * 0.2),  int(num_data * 0.2)    
     
     
-    train_dataset, valid_dataset, test_dataset = torch.utils.data.random_split(dataset, (n_train, n_val, n_test))
+    train_dataset, valid_dataset, test_dataset = torch.utils.data.random_split(
+        dataset, (n_train, n_val, n_test)
+    )
     
     # Train Model
     # Hyperparamters
     batch_size = 16
-    num_epochs = 2
+    num_epochs = 5
     
     # Build Data Loader
     # Define data loaders for training and testing data in this fold
