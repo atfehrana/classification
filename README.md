@@ -8,7 +8,7 @@ La classification de maladie neurologique a pour but d’améliorer la prise en 
 pip install glob
 pip install numpy 
 pip install pandas
-Pip install Pillow
+pip install Pillow
 pip install argparse
 pip install matplotlib
 pip install scikit-learn
@@ -33,7 +33,7 @@ IPTE : ”Neuroflux disorder with intermediate polyglutamine tract expansion”)
 Dans le jeu de données, il y a un déséquilibre des données à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
 
 |Classes|0 (PTE)|1 (IO)|2 (IPTE)|3 (EO)|4 (LO)|
-|------||------||------||------||------||------|
+|------||:------:||:------:||:------:||:------:||------:|
 |Avant équilibrage|580|72|171|233|240|
 |------||------||------||------||------||------|
 |Après équilibrage|171|72|171|171|171|
