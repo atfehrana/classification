@@ -1,9 +1,9 @@
 # importing the libraries
 import matplotlib.pyplot as plt
-from torchmetrics import Accuracy, Recall, Precision, Specificity, F1Score
 
 # PyTorch libraries
 import torch
+from torchmetrics import Accuracy, Recall, Precision, Specificity, F1Score
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -13,6 +13,7 @@ def Evaluation(test_loader, model, classes):
     y_predList = []
     y_trueList = []
     
+    # Evaluation
     with torch.no_grad():
         model.eval()
           
@@ -48,7 +49,7 @@ def Evaluation(test_loader, model, classes):
 
     print(f'ACC {test_acc:.3f} | Precision : {test_precision:.3f} | Recall : {test_recall:.3f} | Specificity : {test_specificity:.3f} | F1Score : {test_f1score:.3f}   ')  
     
-    # Example of predict phase of disease given an MRI scan
+    # Example disease phase prediction given an MRI scan
     plt.imshow(imagesTest[0][0])
     plt.title(classes[y_predList[0][0]])
     plt.show()
