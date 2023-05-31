@@ -47,7 +47,7 @@ Dans le jeu de données, il y a un déséquilibre des données en fonction des c
 
 Pour finir, un resizing et une normalisation des données est faite.
 
-## Entrainement de modèle de prédiction
+## Entrainement des modèles
 
 Les algorithmes utilisés sont :
 
@@ -90,7 +90,7 @@ L'algorithme n'arrive pas à apprendre !
 
 - Analyser les données entre elles (Présence des modalités différentes ?)
 
-- Ajout de nouvelles informations (antécédents)
+- Ajout de nouvelles informations (antécédents ?)
 
 - Augmenter le jeux de données (amélioration du modèle)
 
