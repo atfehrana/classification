@@ -23,8 +23,8 @@ Description des données :
 
 1. Général :
 
-Données : 1296 IRM au total de type T2 axial
-Classes : 5 phases representées 
+- Données : 1296 IRM au total de type T2 axial
+- Classes : 5 phases representées 
 (EO: “Early Onset Neuroflux disorder”
 IO: “Intermediate onset Neuroflux disorder”
 LO : ”late Onset Neuroflux disorder”
