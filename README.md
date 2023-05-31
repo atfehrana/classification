@@ -88,7 +88,7 @@ L'algorithme n'arrive pas à apprendre !
 
 ## Pistes poursuite
 
-- Analyser les données entre elles 
+- Analyser les données entre elles (Présence des modalités différentes ?)
 
 - Ajout de nouvelles informations (antécédents)
 
