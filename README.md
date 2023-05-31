@@ -1,6 +1,6 @@
 # MRI Classification
 
-La classification de maladie neurologique a pour but d’améliorer la prise en charge des patients et de leur donner le traitement le plus approprié. Pour cela, un algorithme de deep learning a été développé pour classer 5 maladies neurologiques grâce à des IRM axial T2.
+La classification de phase de développement d'une maladie neurologique a pour but d’améliorer la prise en charge des patients et de leur donner le traitement le plus approprié. Pour cela, un algorithme de deep learning a été développé pour classer 5 phases d'une maladie neurologique "Neuroflux disorder" grâce à des IRM axial T2.
 
 ## Installation
 
@@ -24,7 +24,7 @@ Description des données :
 1. Général :
 
 Données : 1296 IRM au total de type T2 axial
-Classes : 5 maladies representées 
+Classes : 5 phases representées 
 (EO: “Early Onset Neuroflux disorder”
 IO: “Intermediate onset Neuroflux disorder”
 LO : ”late Onset Neuroflux disorder”
@@ -33,7 +33,7 @@ IPTE : ”Neuroflux disorder with intermediate polyglutamine tract expansion”)
 
 2. Equilibrage des données :
 
-Dans le jeu de données, il y a un déséquilibre des données à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
+Dans le jeu de données, il y a un déséquilibre des données en fonction des classes à prétraiter avant d'utiliser un algorithme d'intelligence artificielle.
 
 |   Class   |   Avant   |   Après   |
 |----------:|-----------|-----------|
@@ -51,10 +51,10 @@ Pour finir, un resizing et une normalisation des données est faite.
 
 Les algorithmes utilisés sont :
 
-- VGG16 avec des poids pré-entrainés
+- VGG16 avec des poids pré-entrainés (ImageNet)
 - CNN
 
-Executer la commande python main_MRIClassification.py —-MRIfolder_neuroflux <neuroflux MRI folder> —-model_name <"VGG16 or "CNN">
+Executer la commande python main_MRIClassification.py —-MRIfolder_neuroflux <neuroflux MRI folder path> —-model_name <"VGG16 or "CNN">
 
 ## Analyse statistique des performances
  
