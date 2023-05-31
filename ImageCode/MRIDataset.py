@@ -5,7 +5,7 @@ from PIL import Image
 import albumentations as A
 from albumentations.pytorch.transforms import ToTensorV2
 
-# PyTorch libraries
+# PyTorch librairy
 import torch
 
 class MRIDataset(object):
